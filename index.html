@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+  Proyecto Programación para Internet 
+  Jorge Arauz
+  Sitio: Descubre Suiza 
+  
+  Aqui esta el HTML principal del sitio. Use Bootstrap para la
+  estructura y rejilla, y trate de que se vea con estilo suizo,
+  o sea colores rojo y blanco y tipografia limpia.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubre Suiza</title>
+  <!-- Aqui puse el iconito de la bandera suiza que aparece en la pestaña -->
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png" type="image/png">
+  <!-- Bootstrap para los estilos base y la rejilla -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Font Awesome para los iconos como la montaña y el buscador -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-KPj8cEUJs7jDD8aIqP1XxRpqXOLwvd1YAr6Po8sg3Y8Bm5KSS4q5Srs38S4efCQr8A/3ZPCwP8vW6Aj+zmVbBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- La fuente Inter de Google Fonts, se ve bien limpia para este tipo de diseño -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Mis estilos personalizados -->
+  <link rel="stylesheet" href="./misEstilos.css">
+</head>
+<body>
+  <!-- Esta es la parte de arriba con el titulo y la descripcion del sitio -->
+  <header class="hero text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold"><i class="fa-solid fa-mountain-sun"></i> Descubre Suiza</h1>
+      <p class="lead">Explora las ciudades más hermosas de Suiza, conoce su valoración y descubre por qué deberías visitarlas.</p>
+      <!-- Aqui aviso cuales ciudades estan disponibles para buscar -->
+      <p class="mt-2" style="opacity: 0.85; font-size: 0.95rem;">
+        <i class="fa-solid fa-map-pin"></i> Ciudades disponibles: <strong>Zurich, Ginebra, Lucerna, Berna y Lugano</strong> ...próximamente más ciudades.
+      </p>
+    </div>
+  </header>
+
+  <!-- Aqui va todo el contenido principal de la pagina -->
+  <main class="container my-5">
+    <!-- El formulario donde el usuario escribe la ciudad que quiere buscar -->
+    <form id="frmBuscar" class="row gy-3 justify-content-center">
+      <div class="col-12 col-md-6">
+        <label for="ciudad" class="form-label">Ciudad suiza:</label>
+        <input type="text" id="ciudad" name="ciudad" class="form-control" placeholder="Ej. Zurich, Ginebra, Lucerna…">
+      </div>
+      <div class="col-auto align-self-end">
+        <button id="btnBuscar" type="button" class="btn btn-search"><i class="fa-solid fa-search"></i> Buscar</button>
+      </div>
+    </form>
+    <!-- Aqui explico lo que significan las vacas del rating -->
+    <div id="leyenda" class="leyenda mt-3 text-end">
+      <small>Más vacas significan mayor recomendación. El máximo es <span id="maxRating"></span> vacas.</small>
+    </div>
+    <!-- En este div es donde aparece la tarjeta con la informacion de la ciudad -->
+    <div id="resultado" class="mt-5"></div>
+  </main>
+
+  <!-- El footer que va hasta abajo de la pagina -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Descubre Suiza – Programacion para Internet.</p>
+    </div>
+  </footer>
+
+  <!-- jQuery y Bootstrap JS, los cargo antes de mi script para que funcionen -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Mi script va hasta el final para que ya este cargado el HTML cuando se ejecute -->
+  <script src="./script.js"></script>
+</body>
+</html>
