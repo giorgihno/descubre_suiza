@@ -6,7 +6,7 @@
 // y manejar los eventos con menos codigo.
 
 // Las ciudades se cargan al iniciar desde el backend (ver cargarCiudades).
-const API_CIUDADES = 'http://localhost:5050/api/ciudades';
+const API_CIUDADES = 'https://descubre-suiza-back.onrender.com/api/ciudades';
 const IMG_PLACEHOLDER = 'https://placehold.co/600x400?text=Imagen+no+disponible';
 /** Extensiones a probar si la ruta del backend no coincide con el archivo local. */
 const IMG_EXT_CANDIDATAS = ['.png', '.jpg', '.jpeg', '.webp', '.gif'];
